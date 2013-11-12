@@ -67,7 +67,24 @@ Linux systems often have files representing LEDs that appear in
 values to the appropriate files. More information can be found
 [here](https://www.kernel.org/doc/Documentation/leds/)
 
-## API
+## High-Level API
 
-Ducumentation on the way!
+**Led(name)** Returns a new Led object which can be used to control the LED
+with the specified name. The name to use for a particular LED is the name of
+the corresponding directory in /sys/class/leds. Examples are led0 on the
+Raspberry Pi and beaglebone:green:usr0, beaglebone:green:usr1,
+beaglebone:green:usr2, and beaglebone:green:usr3 on the BeagleBone or
+BeagleBone Black.
+
+**on()** Turn the LED on.
+
+**off()** Turn the LED off.
+
+**heartbeat()** Heartbeat the LED.
+
+**blink(delayOn, delayOff)** Blink the LED. delayOn and delayOff specify the
+on and off time in milliseconds.
+
+## Low-Level API
+
 
