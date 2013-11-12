@@ -1,0 +1,158 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   'https://github.com/fivdi/led/archive/v0.0.2.tar.gz' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.18
+4 verbose publish [ 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz' ]
+5 verbose cache add [ 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz', null ]
+6 verbose cache add name=undefined spec="https://github.com/fivdi/led/archive/v0.0.2.tar.gz" args=["https://github.com/fivdi/led/archive/v0.0.2.tar.gz",null]
+7 verbose parsed url { protocol: 'https:',
+7 verbose parsed url   slashes: true,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: 'github.com',
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: 'github.com',
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '/fivdi/led/archive/v0.0.2.tar.gz',
+7 verbose parsed url   path: '/fivdi/led/archive/v0.0.2.tar.gz',
+7 verbose parsed url   href: 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz' }
+8 silly lockFile 8c5f9c1f--fivdi-led-archive-v0-0-2-tar-gz https://github.com/fivdi/led/archive/v0.0.2.tar.gz
+9 verbose lock https://github.com/fivdi/led/archive/v0.0.2.tar.gz /home/brian/.npm/8c5f9c1f--fivdi-led-archive-v0-0-2-tar-gz.lock
+10 verbose addRemoteTarball [ 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz', null ]
+11 info retry fetch attempt 1 at 21:26:54
+12 verbose fetch to= /home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz
+13 http GET https://github.com/fivdi/led/archive/v0.0.2.tar.gz
+14 http 200 https://github.com/fivdi/led/archive/v0.0.2.tar.gz
+15 verbose tar unpack /home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz
+16 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+17 verbose lock tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package /home/brian/.npm/d7fc18ab-14500-0-8435254173818976-package.lock
+18 silly lockFile b4a0fb85-14500-0-8435254173818976-tmp-tgz tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz
+19 verbose lock tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz /home/brian/.npm/b4a0fb85-14500-0-8435254173818976-tmp-tgz.lock
+20 silly gunzTarPerm modes [ '755', '644' ]
+21 silly gunzTarPerm extractEntry
+22 silly gunzTarPerm modified mode [ '', 509, 493 ]
+23 silly gunzTarPerm extractEntry .gitignore
+24 silly gunzTarPerm modified mode [ '.gitignore', 436, 420 ]
+25 silly gunzTarPerm extractEntry History.md
+26 silly gunzTarPerm modified mode [ 'History.md', 436, 420 ]
+27 silly gunzTarPerm extractEntry LICENSE
+28 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+31 silly gunzTarPerm extractEntry example/
+32 silly gunzTarPerm modified mode [ 'example/', 509, 493 ]
+33 silly gunzTarPerm extractEntry example/bb-blink.js
+34 silly gunzTarPerm modified mode [ 'example/bb-blink.js', 436, 420 ]
+35 silly gunzTarPerm extractEntry example/bb-blip.js
+36 silly gunzTarPerm modified mode [ 'example/bb-blip.js', 436, 420 ]
+37 silly gunzTarPerm extractEntry example/bb-heartbeat.js
+38 silly gunzTarPerm modified mode [ 'example/bb-heartbeat.js', 436, 420 ]
+39 silly gunzTarPerm extractEntry example/pi-on-off.js
+40 silly gunzTarPerm modified mode [ 'example/pi-on-off.js', 436, 420 ]
+41 silly gunzTarPerm extractEntry led.js
+42 silly gunzTarPerm modified mode [ 'led.js', 436, 420 ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+45 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+46 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+47 silly lockFile b4a0fb85-14500-0-8435254173818976-tmp-tgz tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz
+48 silly lockFile b4a0fb85-14500-0-8435254173818976-tmp-tgz tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/tmp.tgz
+49 verbose tar pack [ '/home/brian/.npm/led/0.0.1/package.tgz',
+49 verbose tar pack   '/home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package' ]
+50 verbose tarball /home/brian/.npm/led/0.0.1/package.tgz
+51 verbose folder /home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+52 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+53 verbose lock tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package /home/brian/.npm/d7fc18ab-14500-0-8435254173818976-package.lock
+54 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+55 verbose lock tar:///home/brian/.npm/led/0.0.1/package.tgz /home/brian/.npm/415a44a7--brian-npm-led-0-0-1-package-tgz.lock
+56 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+57 silly lockFile d7fc18ab-14500-0-8435254173818976-package tar:///home/brian/tmp/npm-5582-8P4_P9tO/1384288014500-0.8435254173818976/package
+58 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+59 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+60 silly lockFile 751564fa-home-brian-npm-led-0-0-1-package /home/brian/.npm/led/0.0.1/package
+61 verbose lock /home/brian/.npm/led/0.0.1/package /home/brian/.npm/751564fa-home-brian-npm-led-0-0-1-package.lock
+62 silly lockFile 751564fa-home-brian-npm-led-0-0-1-package /home/brian/.npm/led/0.0.1/package
+63 silly lockFile 751564fa-home-brian-npm-led-0-0-1-package /home/brian/.npm/led/0.0.1/package
+64 verbose tar unpack /home/brian/.npm/led/0.0.1/package.tgz
+65 silly lockFile 0f352d3b-home-brian-npm-led-0-0-1-package tar:///home/brian/.npm/led/0.0.1/package
+66 verbose lock tar:///home/brian/.npm/led/0.0.1/package /home/brian/.npm/0f352d3b-home-brian-npm-led-0-0-1-package.lock
+67 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+68 verbose lock tar:///home/brian/.npm/led/0.0.1/package.tgz /home/brian/.npm/415a44a7--brian-npm-led-0-0-1-package-tgz.lock
+69 silly gunzTarPerm modes [ '755', '644' ]
+70 silly gunzTarPerm extractEntry package.json
+71 silly gunzTarPerm extractEntry .npmignore
+72 silly gunzTarPerm extractEntry README.md
+73 silly gunzTarPerm extractEntry LICENSE
+74 silly gunzTarPerm extractEntry led.js
+75 silly gunzTarPerm extractEntry History.md
+76 silly gunzTarPerm extractEntry example/bb-blink.js
+77 silly gunzTarPerm extractEntry example/bb-blip.js
+78 silly gunzTarPerm extractEntry example/bb-heartbeat.js
+79 silly gunzTarPerm extractEntry example/pi-on-off.js
+80 silly lockFile 0f352d3b-home-brian-npm-led-0-0-1-package tar:///home/brian/.npm/led/0.0.1/package
+81 silly lockFile 0f352d3b-home-brian-npm-led-0-0-1-package tar:///home/brian/.npm/led/0.0.1/package
+82 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+83 silly lockFile 415a44a7--brian-npm-led-0-0-1-package-tgz tar:///home/brian/.npm/led/0.0.1/package.tgz
+84 verbose chmod /home/brian/.npm/led/0.0.1/package.tgz 644
+85 verbose chown /home/brian/.npm/led/0.0.1/package.tgz [ 1000, 1000 ]
+86 silly lockFile 8c5f9c1f--fivdi-led-archive-v0-0-2-tar-gz https://github.com/fivdi/led/archive/v0.0.2.tar.gz
+87 silly lockFile 8c5f9c1f--fivdi-led-archive-v0-0-2-tar-gz https://github.com/fivdi/led/archive/v0.0.2.tar.gz
+88 silly publish { name: 'led',
+88 silly publish   version: '0.0.1',
+88 silly publish   description: 'LED control on Linux boards',
+88 silly publish   main: 'led.js',
+88 silly publish   directories: { example: 'example', test: 'test' },
+88 silly publish   scripts: { test: 'echo "Tests can only be run manually from the command line. They access hardware." && exit 1' },
+88 silly publish   repository: { type: 'git', url: 'https://github.com/fivdi/led.git' },
+88 silly publish   keywords:
+88 silly publish    [ 'led',
+88 silly publish      'gpio',
+88 silly publish      'beaglebone',
+88 silly publish      'bbb',
+88 silly publish      'bb',
+88 silly publish      'raspberry',
+88 silly publish      'raspi',
+88 silly publish      'rpi',
+88 silly publish      'pi',
+88 silly publish      'linux' ],
+88 silly publish   author: { name: 'fivdi' },
+88 silly publish   license: 'MIT',
+88 silly publish   readme: '## led\n\nLinux boards often have LEDs that can be controlled from userspace. Out of the\nbox, the Raspberry Pi has one such LED labeled ACT or OK, the BeagleBone has\nfour, user led 0 through 3. \n\nThe features supported by these LEDs varies from system from system. One system\nmay allow the LEDs to be turned on and off while the next system will support\nadditional fetaures such as heartbeat or hardware accelerated blinking.\n\nThis module enables these LEDs to be controlled by JavaScript.\n\n## Installation\n\n    $ [sudo] npm install led\n\n## Usage\n\n\n**Blink all user LEDs on the BeagleBone Black five times a second**\n\n```js\nvar Led = require(\'led\');\n\n[\'usr0\', \'usr1\', \'usr2\', \'usr3\'].forEach(function (name) {\n  new Led(\'beaglebone:green:\' + name).blink(100, 100);\n});\n```\n\n**Heartbeat all user LEDs leds on the BeagleBone Black**\n\n```js\nvar Led = require(\'led\');\n\n[\'usr0\', \'usr1\', \'usr2\', \'usr3\'].forEach(function (name) {\n  new Led(\'beaglebone:green:\' + name).heartbeat();\n});\n```\n\n**Blip all user LEDs on the BeagleBone Black once every two seconds**\n\n```js\nvar Led = require(\'led\');\n\n[\'usr0\', \'usr1\', \'usr2\', \'usr3\'].forEach(function (name) {\n  new Led(\'beaglebone:green:\' + name).blink(1, 1999);\n});\n```\n\n**Turn the ACT LED on the Raspberry Pi on for 1 second**\n\n```js\nvar Led = require(\'led\'),\n  led = new Led(\'led0\');\n\nled.on();\n\nsetTimeout(function () {\n  led.off();\n}, 1000);\n```\n\n## How does it work?\n\nLinux systems often have files representing LEDs that appear in\n/sys/class/leds. Such LEDs can be controlled by writing the appropriate\nvalues to the appropriate files. More information can be found\n[here](https://www.kernel.org/doc/Documentation/leds/)\n\n## API\n\nDucumentation on the way!\n\n',
+88 silly publish   readmeFilename: 'README.md',
+88 silly publish   bugs: { url: 'https://github.com/fivdi/led/issues' },
+88 silly publish   _id: 'led@0.0.1',
+88 silly publish   dist: { shasum: 'eb03a61022670cf207a0120ccd5e17d6300a09c6' },
+88 silly publish   _from: 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz',
+88 silly publish   _resolved: 'https://github.com/fivdi/led/archive/v0.0.2.tar.gz' }
+89 info prepublish led@0.0.1
+90 verbose url raw led
+91 verbose url resolving [ 'https://registry.npmjs.org/', './led' ]
+92 verbose url resolved https://registry.npmjs.org/led
+93 info trying registry request attempt 1 at 21:26:56
+94 http PUT https://registry.npmjs.org/led
+95 http 409 https://registry.npmjs.org/led
+96 verbose url raw led
+97 verbose url resolving [ 'https://registry.npmjs.org/', './led' ]
+98 verbose url resolved https://registry.npmjs.org/led
+99 info trying registry request attempt 1 at 21:26:58
+100 http GET https://registry.npmjs.org/led
+101 http 200 https://registry.npmjs.org/led
+102 error publish fail Cannot publish over existing version.
+102 error publish fail Update the 'version' field in package.json and try again.
+102 error publish fail
+102 error publish fail If the previous version was published in error, see:
+102 error publish fail     npm help unpublish
+102 error publish fail
+102 error publish fail To automatically increment version numbers, see:
+102 error publish fail     npm help version
+103 error System Linux 3.11.0-13-generic
+104 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "https://github.com/fivdi/led/archive/v0.0.2.tar.gz"
+105 error cwd /home/brian/arm/src/node/modules/led
+106 error node -v v0.10.18
+107 error npm -v 1.3.8
+108 error code EPUBLISHCONFLICT
+109 verbose exit [ 1, true ]
