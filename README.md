@@ -20,7 +20,7 @@ This module enables these LEDs to be controlled by JavaScript.
 **Blink all user LEDs on the BeagleBone Black five times a second**
 
 ```js
-var Led = require('../led');
+var Led = require('led');
 
 ['usr0', 'usr1', 'usr2', 'usr3'].forEach(function (name) {
   new Led('beaglebone:green:' + name).blink(100, 100);
@@ -30,17 +30,17 @@ var Led = require('../led');
 **Heartbeat all user LEDs leds on the BeagleBone Black**
 
 ```js
-var Led = require('../led');
+var Led = require('led');
 
 ['usr0', 'usr1', 'usr2', 'usr3'].forEach(function (name) {
-  new Led('beaglebone:green:' + name).blink(1, 1999);
+  new Led('beaglebone:green:' + name).heartbeat();
 });
 ```
 
 **Blip all user LEDs on the BeagleBone Black once every two seconds**
 
 ```js
-var Led = require('../led');
+var Led = require('led');
 
 ['usr0', 'usr1', 'usr2', 'usr3'].forEach(function (name) {
   new Led('beaglebone:green:' + name).blink(1, 1999);
