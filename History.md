@@ -1,3 +1,9 @@
+0.0.4 - Nov 14 2013
+===================
+
+  * Device tree overlay example
+  * Documentation
+
 0.0.3 - Nov 12 2013
 ===================
 
