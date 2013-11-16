@@ -2,14 +2,12 @@
 
 Linux boards often have LEDs that can be controlled from userspace. Out of the
 box, the Raspberry Pi has one such LED labeled ACT or OK, the BeagleBone has
-four, user led 0 through 3.
+four, user led 0 through 3. Some systems allow additional off-board LEDs to be
+added at runtime using device tree overlays.
 
 The features supported by these LEDs varies from system from system. One system
 may allow the LEDs to be turned on and off while the next system will support
 additional fetaures such as heartbeat or hardware accelerated blinking.
-
-In addition to the on-board LEDs mentioned above, some systems allow additional
-off-board LEDs to be added at runtime using device tree overlays.
 
 This module enables these LEDs to be controlled by JavaScript.
 
@@ -112,7 +110,7 @@ The following program can be used to let 'my:red:led' glow dimly for a second
 and then brighlty.
 
 ```js
-var Led = require('../led'),
+var Led = require('led'),
   led = new Led('my:red:led'),
   dim = true;
 
