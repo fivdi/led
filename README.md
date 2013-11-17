@@ -1,15 +1,17 @@
 ## led
 
+This module leverages the LED specific functionality provided by the Linux
+operating system to control LEDs using JavaScript. The advantage of this
+technique is speed as the heavy work is off-loaded to the operating system.
+
 Linux boards often have LEDs that can be controlled from userspace. Out of the
 box, the Raspberry Pi has one such LED labeled ACT or OK, the BeagleBone has
 four, user led 0 through 3. Some systems allow additional off-board LEDs to be
 added at runtime using device tree overlays.
 
-The features supported by these LEDs varies from system from system. One system
-may allow the LEDs to be turned on and off while the next system will support
+The features supported by these LEDs varies from system to system. One system
+will allow the LEDs to be turned on and off while the next system will support
 additional fetaures such as heartbeat or hardware accelerated blinking.
-
-This module enables these LEDs to be controlled by JavaScript.
 
 ## Installation
 
