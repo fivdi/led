@@ -1,5 +1,5 @@
-Unpublished
-===========
+1.0.0 - Oct 21 2018
+===================
 
   * Examples
   * Documentation
