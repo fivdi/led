@@ -23,7 +23,7 @@ additional fetaures such as heartbeat or hardware accelerated blinking.
    * [Notes](#notes)
  * [API](#api)
  * [How Does it Work?](#how-does-it-work)
- * [Example - Device Tree Overlay](example---device-tree-overlay)
+ * [Example - Device Tree Overlay](#example---device-tree-overlay)
 
 ## Installation
 
