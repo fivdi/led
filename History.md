@@ -1,5 +1,5 @@
-0.0.6 - Oct 8 2018
-===================
+Unpublished
+===========
 
   * Examples
   * Documentation

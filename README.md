@@ -5,17 +5,31 @@ operating system to control LEDs using JavaScript. The advantage of this
 technique is speed as the heavy work is off-loaded to the operating system.
 
 Linux boards often have LEDs that can be controlled from userspace. Out of the
-box, the Raspberry Pi has one such LED labeled ACT or OK, the BeagleBone has
-four, user led 0 through 3. Some systems allow additional off-board LEDs to be
-added at runtime using device tree overlays.
+box, the Raspberry Pi 1 has one such LED labeled ACT or OK, the Raspberry Pi 3
+has two such LEDs labeled ACT and PWR. The BeagleBone has four, user led 0
+through 3. Some systems allow additional off-board LEDs to be added at runtime
+using device tree overlays.
 
 The features supported by these LEDs varies from system to system. One system
 will allow the LEDs to be turned on and off while the next system will support
 additional fetaures such as heartbeat or hardware accelerated blinking.
 
+## Contents
+
+ * [Installation](#installation)
+ * [Usage](#usage)
+   * [BeagleBone Black](#beaglebone-black)
+   * [Raspberry Pi](#raspberry-pi)
+   * [Notes](#notes)
+ * [API](#api)
+ * [How Does it Work?](#how-does-it-work)
+ * [Example - Device Tree Overlay](example---device-tree-overlay)
+
 ## Installation
 
-    $ [sudo] npm install led
+```
+npm install led
+```
 
 ## Usage
 
@@ -53,7 +67,7 @@ var Led = require('led');
 
 ### Raspberry Pi
 
-**Turn the ACT LED on the Raspberry Pi on for one second**
+**Turn the ACT LED on the Raspberry Pi 1 or 3 on for one second**
 
 ```js
 var Led = require('led'),
@@ -66,7 +80,7 @@ setTimeout(function () {
 }, 1000);
 ```
 
-**Blink ACT and PWR LEDs on the Raspberry Pi five times a second**
+**Blink ACT and PWR LEDs on the Raspberry Pi 3 five times a second**
 
 ```js
 var Led = require('led');
@@ -76,7 +90,7 @@ var Led = require('led');
 });
 ```
 
-**Heartbeat ACT and PWR LEDs on the Raspberry Pi**
+**Heartbeat ACT and PWR LEDs on the Raspberry Pi 3**
 
 ```js
 var Led = require('led');
@@ -88,18 +102,11 @@ var Led = require('led');
 
 ### Notes
 
-Although it may not be immediately obvious, the four LEDs on the BeagleBone
-Black or the two LEDs on Raspberry Pi will continue to blink, heartbeat, and
-blip after the corresponding programs have terminated. All the heavy work
-involved in controlling the LEDs has been off-loaded to the operating system
-and the number of CPU cycles required to control the LEDs is minimized.
-
-## How does it work?
-
-Linux systems often have files representing LEDs that appear in
-**/sys/class/leds**. Such LEDs can be controlled by writing the appropriate
-values to the appropriate files. More information can be found
-[here](https://www.kernel.org/doc/Documentation/leds/)
+Although it may not be immediately obvious, the LEDs on the BeagleBone Black
+or Raspberry Pi will continue to blink, heartbeat, and blip after the
+corresponding programs have terminated. All the heavy work involved in
+controlling the LEDs has been off-loaded to the operating system and the
+number of CPU cycles required to control the LEDs is minimized.
 
 ## API
 
@@ -122,16 +129,23 @@ on and off time in milliseconds.
 **delayOn(val)** Modify the on time for a blinking LED to the specified value
 in milliseconds.
 
-**delayOff(val)** Modify the off time for a blinking LED to the specified value
-in milliseconds.
+**delayOff(val)** Modify the off time for a blinking LED to the specified
+value in milliseconds.
 
-## Example - Device tree overlay
+## How Does It Work?
 
-The example directory contains a device tree overlay called myled.dto which can
-configure P9_12 on the BeagleBone Black as a pin for controlling an LED from
-userspace. The script myled performs all the necessray setup and after
-everything has been setup correctly, there should be an LED called 'my:red:led'
-in /sys/class/leds.
+Linux systems often have files representing LEDs that appear in
+**/sys/class/leds**. Such LEDs can be controlled by writing the appropriate
+values to the appropriate files. More information can be found
+[here](https://www.kernel.org/doc/Documentation/leds/)
+
+## Example - Device Tree Overlay
+
+The example directory contains a device tree overlay called myled.dto which
+can configure P9_12 on the BeagleBone Black as a pin for controlling an LED
+from userspace. The script myled performs all the necessray setup and after
+everything has been setup correctly, there should be an LED called
+'my:red:led' in /sys/class/leds.
 
 The following program can be used to let 'my:red:led' glow dimly for a second
 and then brighlty.
