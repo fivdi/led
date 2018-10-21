@@ -19,6 +19,7 @@ additional fetaures such as heartbeat or hardware accelerated blinking.
 
 ## Usage
 
+### BeagleBone Black
 
 **Blink all user LEDs on the BeagleBone Black five times a second**
 
@@ -50,6 +51,8 @@ var Led = require('led');
 });
 ```
 
+### Raspberry Pi
+
 **Turn the ACT LED on the Raspberry Pi on for one second**
 
 ```js
@@ -63,16 +66,38 @@ setTimeout(function () {
 }, 1000);
 ```
 
+**Blink ACT and PWR LEDs on the Raspberry Pi five times a second**
+
+```js
+var Led = require('led');
+
+['led0', 'led1'].forEach(function (name) {
+          new Led(name).blink(100, 100);
+});
+```
+
+**Heartbeat ACT and PWR LEDs on the Raspberry Pi**
+
+```js
+var Led = require('led');
+
+['led0', 'led1'].forEach(function (name) {
+          new Led(name).heartbeat();
+});
+```
+
+### Notes
+
 Although it may not be immediately obvious, the four LEDs on the BeagleBone
-Black will continue to blink, heartbeat, and blip after the corresponding
-programs have terminated. All the heavy work involved in controlling the
-LEDs has been off-loaded to the operating system and the number of CPU cycles
-required to control the LEDs is minimized.
+Black or the two LEDs on Raspberry Pi will continue to blink, heartbeat, and
+blip after the corresponding programs have terminated. All the heavy work
+involved in controlling the LEDs has been off-loaded to the operating system
+and the number of CPU cycles required to control the LEDs is minimized.
 
 ## How does it work?
 
 Linux systems often have files representing LEDs that appear in
-/sys/class/leds. Such LEDs can be controlled by writing the appropriate
+**/sys/class/leds**. Such LEDs can be controlled by writing the appropriate
 values to the appropriate files. More information can be found
 [here](https://www.kernel.org/doc/Documentation/leds/)
 
