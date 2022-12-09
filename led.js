@@ -92,6 +92,6 @@ Led.prototype.trigger = function(val) { // optional!
 
 // private
 Led.prototype.writeFile = function(fileName, val) {
-  return fs.writeFileSync(ledRootPath + this.name + '/' + fileName, val);
+  return fs.writeFileSync(ledRootPath + this.name + '/' + fileName, val.toString());
 };
 
