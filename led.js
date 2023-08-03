@@ -92,6 +92,10 @@ Led.prototype.trigger = function(val) { // optional!
 
 // private
 Led.prototype.writeFile = function(fileName, val) {
+  if (Number.isFinite(val)) {
+    val = val.toString();
+  }
+
   return fs.writeFileSync(ledRootPath + this.name + '/' + fileName, val);
 };
 

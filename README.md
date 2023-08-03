@@ -67,11 +67,11 @@ var Led = require('led');
 
 ### Raspberry Pi
 
-**Turn the ACT LED on the Raspberry Pi 1 or 3 on for one second**
+**Turn the ACT LED on the Raspberry Pi on for one second**
 
 ```js
 var Led = require('led'),
-  led = new Led('led0');
+  led = new Led('ACT');
 
 led.on();
 
@@ -80,22 +80,22 @@ setTimeout(function () {
 }, 1000);
 ```
 
-**Blink ACT and PWR LEDs on the Raspberry Pi 3 five times a second**
+**Blink ACT and PWR LEDs on the Raspberry Pi five times a second**
 
 ```js
 var Led = require('led');
 
-['led0', 'led1'].forEach(function (name) {
+['ACT', 'PWR'].forEach(function (name) {
           new Led(name).blink(100, 100);
 });
 ```
 
-**Heartbeat ACT and PWR LEDs on the Raspberry Pi 3**
+**Heartbeat ACT and PWR LEDs on the Raspberry Pi**
 
 ```js
 var Led = require('led');
 
-['led0', 'led1'].forEach(function (name) {
+['ACT', 'PWR'].forEach(function (name) {
           new Led(name).heartbeat();
 });
 ```
@@ -112,7 +112,7 @@ number of CPU cycles required to control the LEDs is minimized.
 
 **Led(name)** Returns a new Led object which can be used to control the LED
 with the specified name. The name to use for a particular LED is the name of
-the corresponding directory in /sys/class/leds. Examples are led0 on the
+the corresponding directory in /sys/class/leds. Examples are ACT on the
 Raspberry Pi and beaglebone:green:usr0, beaglebone:green:usr1,
 beaglebone:green:usr2, and beaglebone:green:usr3 on the BeagleBone or
 BeagleBone Black.

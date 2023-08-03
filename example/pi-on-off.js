@@ -1,5 +1,5 @@
 var Led = require('../led'),
-  led = new Led('led0');
+  led = new Led('ACT');
 
 led.on();
 

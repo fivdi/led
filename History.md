@@ -1,3 +1,8 @@
+Unpublished
+===========
+
+  * Fix [#3](https://github.com/fivdi/led/issues/3)
+
 1.0.0 - Oct 21 2018
 ===================
 
