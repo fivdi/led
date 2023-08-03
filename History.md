@@ -1,5 +1,5 @@
-Unpublished
-===========
+1.0.1 - Aug 03 2023
+===================
 
   * Fix [#3](https://github.com/fivdi/led/issues/3)
 

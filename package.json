@@ -1,6 +1,6 @@
 {
   "name": "led",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LED control on Linux boards",
   "main": "led.js",
   "directories": {
